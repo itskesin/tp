@@ -244,7 +244,7 @@ public class PatientParser extends Parser {
                 parseInput[2] = detail.substring(1).trim();
             } else if (detail.startsWith(DATE_OF_BIRTH_TAG) && detail.trim().length() > 3) {
                 parseInput[3] = detail.substring(3).trim();
-            } else if (detail.startsWith(BLOOD_TYPE_TAG) && detail.trim().length() > 3) {
+            } else if (detail.startsWith(BLOOD_TYPE_TAG) && detail.trim().length() > 2) {
                 parseInput[4] = detail.substring(1).trim().toUpperCase();
             } else if (detail.startsWith(ALLERGIES_TAG) && detail.trim().length() > 3) {
                 parseInput[5] = detail.substring(1).trim();

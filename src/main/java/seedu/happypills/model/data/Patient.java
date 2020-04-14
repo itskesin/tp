@@ -39,8 +39,6 @@ public class Patient {
      */
     public Patient(String name, String nric, int phoneNumber, String dateOfBirth,
                    String bloodType, String allergies, String remarks) {
-
-        if (dateValidation(dateOfBirth)) {
             this.name = name;
             this.nric = nric;
             this.phoneNumber = phoneNumber;
@@ -49,10 +47,6 @@ public class Patient {
             this.allergies = allergies;
             this.remarks = remarks;
             this.appointments = new ArrayList<Appointment>();
-        } else {
-            System.out.println("    Date of birth is invalid. Please try again in this format:"
-                                + "\n    DD/MM/YYYY");
-        }
     }
 
     /**

@@ -38,9 +38,6 @@ public class GetPatientCommand extends PatientCommand {
     public String execute(
             PatientMap patients, AppointmentMap appointments, PatientRecordMap visits) throws HappyPillsException {
         assert !patientNric.isEmpty() : "No NRIC was provided";
-        if (Checker.isValidNric(patientNric)) {
-            return TextUi.INVALID_NRIC_MESSAGE;
-        }
         if (patients.containsKey(patientNric)) {
             return PatientTextUi.getPatientSuccessMessage(patients.get(patientNric));
         } else {
